@@ -150,7 +150,7 @@ module Coinbase
         params[:size] = amt
         params[:price] = price
         params[:side] = "buy"
-
+        params[:post_only] = "true"
         out = nil
         post("/orders", params) do |resp|
           out = response_object(resp)
